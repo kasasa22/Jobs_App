@@ -24,7 +24,7 @@ const Welcome = () => {
       <View style={styles.Container}>
         <Text style={styles.userName}> Hello Adrian </Text>
         <Text style={styles.welcomeMessage}>Find your perfect job </Text>
-      </View>
+      
       <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
           <TextInput style={styles.searchInput}
@@ -40,6 +40,7 @@ const Welcome = () => {
           style={styles.searchBtnImage}
           />
         </TouchableOpacity>
+      </View>
         <View style={styles.tabsContainer}>
         <FlatList data ={jobTypes} 
         renderItem={({item})=>(

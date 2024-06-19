@@ -17,21 +17,28 @@ const Home = () => {
                     headerShadowVisible: false,
                     headerLeft: () => (
                         <ScreenHeaderBtn 
-                            iconUrl={icons.menu} dimensions="100%"
+                            iconUrl={icons.menu} dimensions="60%"
                         />
                     ),
                     headerRight: () => (
                         <ScreenHeaderBtn 
-                            iconUrl={icons.profile} dimensions="100%"
+                            iconUrl={images.profile} dimensions="60%"
                         />
-                    )
+                    ),
+                    headerTitle: ""
                 }}
             />
             {/* Add your ScrollView and other components here */}
-            <ScrollView>
-                <View>
-                    <Text>Welcome to the Home Screen</Text>
-                    {/* Include other components like Nearbyjobs, Popularjobs, etc. */}
+            <ScrollView showsHorizontalScrollIndicator={false}>
+                <View
+                style={{ 
+                    flex: 1,
+                    padding:SIZES.medium,
+                 }}
+                >
+                    <Welcome/>
+                    <Popularjobs/>
+                    <Nearbyjobs/>  
                 </View>
             </ScrollView>
         </SafeAreaView>
